@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лазанья</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    
+    <meta name="theme-color" content="hsl(25, 89%, 21%)">
+    <link rel="apple-touch-icon" href="../../images/iphone-icon-big.png"/>
+
+    <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}</style>
+    <style>
+        @font-face {
+            font-family: GraublauWeb;
+            src: url(../../fonts/NewLetterGothicC.otf) format("opentype");
+        }
+        @font-face {
+            font-family: GraublauWeb;
+            font-weight: bold;
+            src: url(../../fonts/NewLetterGothicC-Bold.otf) format("opentype");
+        }
+        .title, h1, h2, h3, h4 {
+            color: #4b2200;
+        }
+        body {
+            font-family: 'GraublauWeb', serif;
+            color: #662e06;
+            font-size: 1rem;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(../../images/2.webp);
+            background-size: auto;
+            background-repeat: repeat;
+            filter: opacity(50%);
+            z-index: -1;
+        }
+        body {
+            overflow: auto;
+        }
+        h1 {
+            font-size: 4vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5vh;
+            padding-top: 2vh; !important;
+        }
+    </style>
+
+        <style>
+        .container {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .recipe-image {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 1.5rem;
+        }
+
+        .ingredients {
+            background-color: #fef2e6;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .ingredients h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        .ingredient-item {
+            padding: 0.3rem 0;
+            border-bottom: 1px solid #e3d5c6;
+        }
+
+        .ingredient-item:last-child {
+            border-bottom: none;
+        }
+
+        .video {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 315px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .steps {
+            padding: 1rem;
+            background-color: #fef2e6;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .notes {
+            margin-bottom: 20px;
+        }
+
+        .step {
+            margin-bottom: 2rem;
+        }
+
+        .step img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .step-text {
+            line-height: 1.6;
+        }
+
+        .step-number {
+            color: #4b2200;
+            font-weight: bold;
+        }
+
+        .step-divider {
+            border: none;
+            height: 2px;
+            background: #662e06;
+            opacity: 30%;
+            margin: 2rem 0;
+        }
+    </style>
+        <style>
+            .note-input-wrapper {
+                margin-bottom: 1rem;
+                display: flex;
+                align-items: center;
+            }
+
+            .note-input {
+                width: calc(100% - 50px);
+                padding: 0.5rem;
+                border-radius: 8px;
+                border: 1px solid #ccc;
+                font-size: 1rem;
+            }
+
+            .note-button {
+                padding: 0.5rem 1rem;
+                margin-left: 0.5rem;
+                border: none;
+                background-color: #662e06;
+                color: white;
+                border-radius: 8px;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+
+            .note-list {
+                list-style: none;
+                padding-left: 0;
+                margin: 0;
+            }
+
+            .note-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0.5rem;
+                background: #fef2e6;
+                padding: 0.5rem 1rem;
+                border-radius: 10px;
+                box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+                position: relative;
+            }
+
+            .delete-x {
+                font-size: 1.2rem;
+                color: #b31c1c;
+                cursor: pointer;
+                padding: 0 0.5rem;
+                line-height: 1;
+                background: transparent;
+                border: none;
+                font-weight: bold;
+                user-select: none;
+            }
+        </style>
+        <script src="/livewire/livewire.min.js?id=df3a17f2"   data-csrf="Sur85aCgbtW4StcAUH8UvBhZ11AyjqSON2pQPbrq" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+</head>
+<body>
+<div class="background"></div>
+        <div class="container">
+        <h1 class="title">Лазанья</h1>
+
+        <img src="../../images/receipts/lasagna.jpg" alt="Лазанья"
+             class="recipe-image">
+
+        <div class="ingredients">
+            <h3>Ингредиенты:</h3>
+                            <div class="ingredient-item">
+                                            Лазанья - 6 шт.
+                                    </div>
+                            <div class="ingredient-item">
+                                            Фарш - 750 г.
+                                    </div>
+                            <div class="ingredient-item">
+                                            Лук
+                                    </div>
+                            <div class="ingredient-item">
+                                            Бульон - 200 мл.
+                                    </div>
+                            <div class="ingredient-item">
+                                            Сыр
+                                    </div>
+                            <div class="ingredient-item">
+                                            Томатная паста - 2 ст.л.
+                                    </div>
+                            <div class="ingredient-item">
+                                            Растительное масло - 1 ст.л.
+                                    </div>
+                            <div class="ingredient-item">
+                                            Молоко - 500 мл.
+                                    </div>
+                            <div class="ingredient-item">
+                                            Сливочное масло - 80 г.
+                                    </div>
+                            <div class="ingredient-item">
+                                            Мука - 60 г.
+                                    </div>
+                            <div class="ingredient-item">
+                                            Молотый мускатный орех - 0.5 ч.л.
+                                    </div>
+                            <div class="ingredient-item">
+                                            Соль
+                                    </div>
+                    </div>
+
+        <div class="notes">
+            <div wire:snapshot="{&quot;data&quot;:{&quot;receiptCode&quot;:&quot;lasagna&quot;,&quot;newNote&quot;:&quot;&quot;},&quot;memo&quot;:{&quot;id&quot;:&quot;dMYtUf7OuoGUVtYiZC6J&quot;,&quot;name&quot;:&quot;notes&quot;,&quot;path&quot;:&quot;receipt\/lasagna&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;0420090a080d6b827318d78ffcadeb7be5d1a06bfa3f75abbb19ed58ad624eec&quot;}" wire:effects="[]" wire:id="dMYtUf7OuoGUVtYiZC6J">
+    
+    <h3 class="note-header">Заметки:</h3>
+
+    <div class="note-input-wrapper">
+        <input
+                type="text"
+                wire:model.defer="newNote"
+                wire:keydown.enter="addNote"
+                class="note-input"
+                placeholder="Добавить заметку..."
+        >
+        <button
+                wire:click="addNote"
+                class="note-button"
+        >
+            ➤
+        </button>
+    </div>
+
+    <ul class="note-list">
+            </ul>
+</div>        </div>
+
+                    <h3>Видео рецепт:</h3>
+            <div class="video">
+                <iframe width="720" height="405"
+                        src="https://rutube.ru/play/embed/b60fa508a9a1fc666d0da6c4f8ca6a20/?p=tMJObmNyvQHvpU3aKSZgDQ" frameBorder="0"
+                        allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+                </iframe>
+            </div>
+        
+                    <h3>Пошаговый рецепт:</h3>
+            <div class="steps">
+                <div class="cooking-steps">
+                                            <div class="step">
+                            <img src="../../images/steps/lasagna/step1.jpg"
+                                 alt="Шаг 1">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 1.</span> Подготавливаем все необходимые ингредиенты.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/lasagna/step2.jpg"
+                                 alt="Шаг 2">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 2.</span> Лук нарезаем мелкими кубиками.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/lasagna/step3.jpg"
+                                 alt="Шаг 3">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 3.</span> Лук обжариваем на растительном масле до золотистости.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/lasagna/step4.jpg"
+                                 alt="Шаг 4">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 4.</span> Как только лук стал золотистым и мягким, добавляем к нему фарш.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/lasagna/step5.jpg"
+                                 alt="Шаг 5">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 5.</span> Томатную пасту разводим мясным бульоном.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/lasagna/step6.jpg"
+                                 alt="Шаг 6">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 6.</span> Фарш солим, перчим, добавляем томатную пасту, смешанную с бульоном, и тушим минут 10.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/lasagna/step7.jpg"
+                                 alt="Шаг 7">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 7.</span> Готовим соус бешамель. В сковороде растапливаем сливочное масло, добавляем просеянную муку, непрерывно помешивая венчиком. Тонкой струйкой вливаем молоко, продолжая помешивать.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/lasagna/step8.jpg"
+                                 alt="Шаг 8">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 8.</span> Как только соус начнёт густеть, добавляем соль и мускатный орех. Когда соус начнёт кипеть, выключаем огонь.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/lasagna/step9.jpg"
+                                 alt="Шаг 9">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 9.</span> Сыр натираем на крупной тёрке.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/lasagna/step10.jpg"
+                                 alt="Шаг 10">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 10.</span> Духовку разогреваем до 200 градусов. Собираем лазанью. Дно формы для запекания смазываем соусом бешамель. Затем выкладываем слой листов лазаньи (их можно свободно ломать). Сверху добавляем мясную начинку и равномерно распределяем. На мясную начинку - снова соус бешамель. Посыпаем сыром. Все слои выкладываем в том же порядке. Последним слоем должен быть сыр.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/lasagna/step11.jpg"
+                                 alt="Шаг 11">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 11.</span> Форму с лазаньей отправляем в разогретую до 200 градусов духовку примерно на 30 минут (ориентируйтесь на свою духовку).
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/lasagna/step12.jpg"
+                                 alt="Шаг 12">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 12.</span> Приятного аппетита!
+                            </div>
+                        </div>
+                                                            </div>
+            </div>
+            </div>
+
+    </body>
+</html>

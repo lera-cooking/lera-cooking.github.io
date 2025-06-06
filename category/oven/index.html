@@ -1,0 +1,268 @@
+<h1>В духовке</h1>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>В духовке</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    
+    <meta name="theme-color" content="hsl(25, 89%, 21%)">
+    <link rel="apple-touch-icon" href="../../images/iphone-icon-big.png"/>
+
+    <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}</style>
+    <style>
+        @font-face {
+            font-family: GraublauWeb;
+            src: url(../../fonts/NewLetterGothicC.otf) format("opentype");
+        }
+        @font-face {
+            font-family: GraublauWeb;
+            font-weight: bold;
+            src: url(../../fonts/NewLetterGothicC-Bold.otf) format("opentype");
+        }
+        .title, h1, h2, h3, h4 {
+            color: #4b2200;
+        }
+        body {
+            font-family: 'GraublauWeb', serif;
+            color: #662e06;
+            font-size: 1rem;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(../../images/2.webp);
+            background-size: auto;
+            background-repeat: repeat;
+            filter: opacity(50%);
+            z-index: -1;
+        }
+        body {
+            overflow: auto;
+        }
+        h1 {
+            font-size: 4vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5vh;
+            padding-top: 2vh; !important;
+        }
+    </style>
+
+        <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 16px 32px;
+            box-sizing: border-box;
+            align-items: center;
+            margin: auto;
+        }
+
+        .receipt-link {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .receipt-card {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: #fef2dc;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%; /* растягивать */
+        }
+
+        .receipt-img {
+            width: 100%;
+            aspect-ratio: 4 / 2;
+            object-fit: cover;
+            display: block;
+        }
+
+        .receipt-title {
+            font-size: 3vh;
+            color: #662e06;
+            text-align: center;
+            padding: 25px 0 15px;
+        }
+
+        .receipt-ingredients {
+            padding: 12px 16px;
+            font-size: 2vh;
+            color: #662e06;
+        }
+
+        .receipt-ingredients strong {
+            color: #662e06;
+        }
+    </style>
+    <script src="/livewire/livewire.min.js?id=df3a17f2"   data-csrf="Sur85aCgbtW4StcAUH8UvBhZ11AyjqSON2pQPbrq" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+</head>
+<body>
+<div class="background"></div>
+    <div class="container">
+            <a class="receipt-link" href="../../receipt/meat-casserole/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/meat-casserole.jpg" alt="Запеканка мясная &quot;Сытная&quot;">
+                <div class="receipt-title">
+                    <span>Запеканка мясная &quot;Сытная&quot;</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> фарш, картошка, помидор, лук, сыр, яйца, сметана или майонез, соль, растительное масло
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/nests/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/nests.jpg" alt="Мясные гнёзда">
+                <div class="receipt-title">
+                    <span>Мясные гнёзда</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> фарш, лук, хлеб, молоко, яйца, сметана, сыр, соль
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/lasagna/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/lasagna.jpg" alt="Лазанья">
+                <div class="receipt-title">
+                    <span>Лазанья</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> лазанья, фарш, лук, бульон, сыр, томатная паста, растительное масло, молоко, сливочное масло, мука, молотый мускатный орех, соль
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/potato-nests/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/potato-nests.jpg" alt="Картофельные гнёзда с начинкой из мясного фарша, овощей и сыра">
+                <div class="receipt-title">
+                    <span>Картофельные гнёзда с начинкой из мясного фарша, овощей и сыра</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> картошка, фарш, сыр, помидор, лук, чеснок, сливочное масло, соль
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/chicken-casserole/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/chicken-casserole.jpg" alt="Запеканка картофельная с курицей">
+                <div class="receipt-title">
+                    <span>Запеканка картофельная с курицей</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> картошка, куриное филе, яйца, сметана, помидор, сыр
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/chicken-roll/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/chicken-roll.jpg" alt="Куриные рулетики с творожным сыром">
+                <div class="receipt-title">
+                    <span>Куриные рулетики с творожным сыром</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> куриное филе, творожный сыр, сметана, чеснок, сыр, соль
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/balls-french/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/balls-french.jpg" alt="Биточки по-французски">
+                <div class="receipt-title">
+                    <span>Биточки по-французски</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> фарш куриный, лук, сливочное масло, соленые огурцы, грибы, помидор, майонез, моцарелла, соль, чеснок
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/potato-with-chicken-and-tomatoes/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/potato-with-chicken-and-tomatoes.jpg" alt="Картофель с курицей и помидорами, запечённые в пергаменте">
+                <div class="receipt-title">
+                    <span>Картофель с курицей и помидорами, запечённые в пергаменте</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> картошка, куриное филе, помидор, лук, чеснок, сыр, соль
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/chicken-with-mushroom/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/chicken-with-mushroom.jpg" alt="Куриное филе с грибами, запечённое в сметанно-сырном соусе">
+                <div class="receipt-title">
+                    <span>Куриное филе с грибами, запечённое в сметанно-сырном соусе</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> куриное филе, грибы, сыр, сметана, мука, сливочное масло, растительное масло, чеснок, соль
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/chicken-bedro/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/chicken-bedro.jpg" alt="Куриные бёдрышки, запечённые с картофелем в сливках">
+                <div class="receipt-title">
+                    <span>Куриные бёдрышки, запечённые с картофелем в сливках</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> куриные бедрышки, картошка, сыр, лук, сливки 20%, растительное масло, соль
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/julienne-casserole/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/julienne-casserole.jpg" alt="Запеканка а-ля жульен">
+                <div class="receipt-title">
+                    <span>Запеканка а-ля жульен</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> куриное филе, картошка, грибы, сливки 30%, лук, сыр, сливочное масло, растительное масло, соль
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/julienne/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/julienne.jpg" alt="Жульен">
+                <div class="receipt-title">
+                    <span>Жульен</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> куриное филе, грибы, лук, сыр, сливочное масло, мука, молоко, соль
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/backed-potatoes-sausage/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/backed-potatoes-sausage.jpg" alt="Картошка, запечённая с сосисками, помидорами и сыром">
+                <div class="receipt-title">
+                    <span>Картошка, запечённая с сосисками, помидорами и сыром</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> картошка, сосиски, помидор, сыр, майонез, чеснок, растительное масло, соль
+                </div>
+            </div>
+        </a>
+    </div>
+
+    </body>
+</html>

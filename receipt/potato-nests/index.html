@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Картофельные гнёзда с начинкой из мясного фарша, овощей и сыра</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    
+    <meta name="theme-color" content="hsl(25, 89%, 21%)">
+    <link rel="apple-touch-icon" href="../../images/iphone-icon-big.png"/>
+
+    <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}</style>
+    <style>
+        @font-face {
+            font-family: GraublauWeb;
+            src: url(../../fonts/NewLetterGothicC.otf) format("opentype");
+        }
+        @font-face {
+            font-family: GraublauWeb;
+            font-weight: bold;
+            src: url(../../fonts/NewLetterGothicC-Bold.otf) format("opentype");
+        }
+        .title, h1, h2, h3, h4 {
+            color: #4b2200;
+        }
+        body {
+            font-family: 'GraublauWeb', serif;
+            color: #662e06;
+            font-size: 1rem;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(../../images/2.webp);
+            background-size: auto;
+            background-repeat: repeat;
+            filter: opacity(50%);
+            z-index: -1;
+        }
+        body {
+            overflow: auto;
+        }
+        h1 {
+            font-size: 4vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5vh;
+            padding-top: 2vh; !important;
+        }
+    </style>
+
+        <style>
+        .container {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .recipe-image {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 1.5rem;
+        }
+
+        .ingredients {
+            background-color: #fef2e6;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .ingredients h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        .ingredient-item {
+            padding: 0.3rem 0;
+            border-bottom: 1px solid #e3d5c6;
+        }
+
+        .ingredient-item:last-child {
+            border-bottom: none;
+        }
+
+        .video {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 315px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .steps {
+            padding: 1rem;
+            background-color: #fef2e6;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .notes {
+            margin-bottom: 20px;
+        }
+
+        .step {
+            margin-bottom: 2rem;
+        }
+
+        .step img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .step-text {
+            line-height: 1.6;
+        }
+
+        .step-number {
+            color: #4b2200;
+            font-weight: bold;
+        }
+
+        .step-divider {
+            border: none;
+            height: 2px;
+            background: #662e06;
+            opacity: 30%;
+            margin: 2rem 0;
+        }
+    </style>
+        <style>
+            .note-input-wrapper {
+                margin-bottom: 1rem;
+                display: flex;
+                align-items: center;
+            }
+
+            .note-input {
+                width: calc(100% - 50px);
+                padding: 0.5rem;
+                border-radius: 8px;
+                border: 1px solid #ccc;
+                font-size: 1rem;
+            }
+
+            .note-button {
+                padding: 0.5rem 1rem;
+                margin-left: 0.5rem;
+                border: none;
+                background-color: #662e06;
+                color: white;
+                border-radius: 8px;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+
+            .note-list {
+                list-style: none;
+                padding-left: 0;
+                margin: 0;
+            }
+
+            .note-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0.5rem;
+                background: #fef2e6;
+                padding: 0.5rem 1rem;
+                border-radius: 10px;
+                box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+                position: relative;
+            }
+
+            .delete-x {
+                font-size: 1.2rem;
+                color: #b31c1c;
+                cursor: pointer;
+                padding: 0 0.5rem;
+                line-height: 1;
+                background: transparent;
+                border: none;
+                font-weight: bold;
+                user-select: none;
+            }
+        </style>
+        <script src="/livewire/livewire.min.js?id=df3a17f2"   data-csrf="Sur85aCgbtW4StcAUH8UvBhZ11AyjqSON2pQPbrq" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+</head>
+<body>
+<div class="background"></div>
+        <div class="container">
+        <h1 class="title">Картофельные гнёзда с начинкой из мясного фарша, овощей и сыра</h1>
+
+        <img src="../../images/receipts/potato-nests.jpg" alt="Картофельные гнёзда с начинкой из мясного фарша, овощей и сыра"
+             class="recipe-image">
+
+        <div class="ingredients">
+            <h3>Ингредиенты:</h3>
+                            <div class="ingredient-item">
+                                            Картошка - 800 г.
+                                    </div>
+                            <div class="ingredient-item">
+                                            Фарш - 400 г.
+                                    </div>
+                            <div class="ingredient-item">
+                                            Сыр
+                                    </div>
+                            <div class="ingredient-item">
+                                            Помидор
+                                    </div>
+                            <div class="ingredient-item">
+                                            Лук
+                                    </div>
+                            <div class="ingredient-item">
+                                            Чеснок
+                                    </div>
+                            <div class="ingredient-item">
+                                            Сливочное масло - 30 г
+                                    </div>
+                            <div class="ingredient-item">
+                                            Соль
+                                    </div>
+                    </div>
+
+        <div class="notes">
+            <div wire:snapshot="{&quot;data&quot;:{&quot;receiptCode&quot;:&quot;potato-nests&quot;,&quot;newNote&quot;:&quot;&quot;},&quot;memo&quot;:{&quot;id&quot;:&quot;LnPRj2CUwwFV9UVWF8NQ&quot;,&quot;name&quot;:&quot;notes&quot;,&quot;path&quot;:&quot;receipt\/potato-nests&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;d5d5de6c2fe5619d6e080bf3c1a763d1e6083f0aeb335806535321bdb6a4a9d4&quot;}" wire:effects="[]" wire:id="LnPRj2CUwwFV9UVWF8NQ">
+    
+    <h3 class="note-header">Заметки:</h3>
+
+    <div class="note-input-wrapper">
+        <input
+                type="text"
+                wire:model.defer="newNote"
+                wire:keydown.enter="addNote"
+                class="note-input"
+                placeholder="Добавить заметку..."
+        >
+        <button
+                wire:click="addNote"
+                class="note-button"
+        >
+            ➤
+        </button>
+    </div>
+
+    <ul class="note-list">
+            </ul>
+</div>        </div>
+
+        
+                    <h3>Пошаговый рецепт:</h3>
+            <div class="steps">
+                <div class="cooking-steps">
+                                            <div class="step">
+                            <img src="../../images/steps/potato-nests/step1.jpg"
+                                 alt="Шаг 1">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 1.</span> Подготовьте все ингредиенты. Фарш используйте любой, на ваш вкус. У меня — свино-говяжий. Пряности регулируйте на своё усмотрение.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/potato-nests/step2.jpg"
+                                 alt="Шаг 2">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 2.</span> Картофельные клубни очистите и нарежьте небольшими кусочками. Выложите картофель в кастрюлю с холодной подсоленной водой и поставьте на огонь. Варите до готовности. Время варки зависит от сорта и размера кусочков картофеля. Мне понадобилось 25 минут после закипания, чтобы картофель стал мягким.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/potato-nests/step3.jpg"
+                                 alt="Шаг 3">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 3.</span> Когда картошка будет готова, слейте отвар. Добавьте кусочек сливочного масла.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/potato-nests/step4.jpg"
+                                 alt="Шаг 4">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 4.</span> Разомните картофель толкушкой до консистенции пюре.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/potato-nests/step5.jpg"
+                                 alt="Шаг 5">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 5.</span> Укроп промойте, обсушите салфеткой и измельчите. Нарезанный укроп добавьте в пюре. Приправьте солью и молотым чёрным перцем по вкусу. Хорошо перемешайте и немного остудите, чтобы было комфортно работать. Включите духовку для разогрева до 200 градусов.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/potato-nests/step6.jpg"
+                                 alt="Шаг 6">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 6.</span> Лук очистите и нарежьте кубиками. В сковороде разогрейте 20 мл растительного масла и обжарьте лук на небольшом огне, помешивая, 3-4 минуты.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/potato-nests/step7.jpg"
+                                 alt="Шаг 7">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 7.</span> Сладкий перец промойте и нарежьте кубиками. Добавьте к луку, перемешайте и обжаривайте на умеренном огне, помешивая, 2-3 минуты.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/potato-nests/step8.jpg"
+                                 alt="Шаг 8">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 8.</span> К овощам добавьте мясной фарш и обжаривайте 2-4 минуты, часто помешивая лопаткой, чтобы разбить крупные комочки.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/potato-nests/step9.jpg"
+                                 alt="Шаг 9">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 9.</span> По вкусу приправьте солью, молотым перцем и паприкой. Перемешайте и обжаривайте на небольшом огне ещё 4-5 минут.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/potato-nests/step10.jpg"
+                                 alt="Шаг 10">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 10.</span> Помидор нарежьте кубиками. Чеснок очистите и мелко нарежьте или пропустите через пресс. Помидор и чеснок добавьте к фаршу, перемешайте и тушите 4-5 минут на умеренном огне, помешивая лопаткой.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/potato-nests/step11.jpg"
+                                 alt="Шаг 11">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 11.</span> Форму для запекания застелите пергаментом и смажьте оставшимся маслом. Руки смажьте растительным маслом, чтобы пюре не липло к рукам. Из пюре сформируйте 6 одинаковых колобков (вес одного шарика - 100-110 г). Выложите картофельные шарики на пергамент на расстоянии друг от друга.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/potato-nests/step12.jpg"
+                                 alt="Шаг 12">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 12.</span> В каждом шарике сделайте углубление удобным для вас способом. Я сформировала гнёзда руками, можно использовать дно подходящего стакана или рюмки.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/potato-nests/step13.jpg"
+                                 alt="Шаг 13">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 13.</span> Твёрдый сыр натрите на средней тёрке. Половину порции сыра распределите по всем заготовкам.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/potato-nests/step14.jpg"
+                                 alt="Шаг 14">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 14.</span> В каждое картофельное гнёздышко добавьте порцию мясной начинки, формируя небольшую горку.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/potato-nests/step15.jpg"
+                                 alt="Шаг 15">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 15.</span> Распределите оставшийся тёртый сыр. Отправьте картофельные гнёзда с фаршем, овощами и сыром в разогретую до 200 градусов духовку и запекайте 15-25 минут, до расплавления сыра. Время запекания зависит от мощности вашей духовки.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                            <img src="../../images/steps/potato-nests/step16.jpg"
+                                 alt="Шаг 16">
+                            <div class="step-text">
+                                <span class="step-number">Шаг 16.</span> Картофельные гнёзда с начинкой из мясного фарша, овощей и сыра готовы. Сразу подавайте к столу. Очень вкусно со сметаной или другим подходящим соусом.
+                            </div>
+                        </div>
+                                                            </div>
+            </div>
+            </div>
+
+    </body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лера готовит!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    
+    <meta name="theme-color" content="hsl(25, 89%, 21%)">
+    <link rel="apple-touch-icon" href="images/iphone-icon-big.png"/>
+
+    <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}</style>
+    <style>
+        @font-face {
+            font-family: GraublauWeb;
+            src: url(fonts/NewLetterGothicC.otf) format("opentype");
+        }
+        @font-face {
+            font-family: GraublauWeb;
+            font-weight: bold;
+            src: url(fonts/NewLetterGothicC-Bold.otf) format("opentype");
+        }
+        .title, h1, h2, h3, h4 {
+            color: #4b2200;
+        }
+        body {
+            font-family: 'GraublauWeb', serif;
+            color: #662e06;
+            font-size: 1rem;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(images/2.webp);
+            background-size: auto;
+            background-repeat: repeat;
+            filter: opacity(50%);
+            z-index: -1;
+        }
+        body {
+            overflow: auto;
+        }
+        h1 {
+            font-size: 4vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5vh;
+            padding-top: 2vh; !important;
+        }
+    </style>
+
+        <style>
+        .category-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px 4px;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .category-row {
+            text-decoration: none;
+            width: 30%;
+        }
+
+        .category-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 8px 0;
+            width: 100%;
+        }
+
+        .category-img {
+            width: 70%;
+            max-width: 70%;
+            aspect-ratio: 1 / 1;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .category-title {
+            margin-top: 15px;
+            font-size: 2.2vh;
+            text-align: center;
+            color: #331800;
+            font-weight: bold;
+        }
+    </style>
+    <script src="/livewire/livewire.min.js?id=df3a17f2"   data-csrf="Sur85aCgbtW4StcAUH8UvBhZ11AyjqSON2pQPbrq" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+</head>
+<body>
+<div class="background"></div>
+        <h1>Рецепты от жены</h1>
+    
+    <div class="category-container">
+                    <a href="category/breakfast/index.html" class="category-row">
+    <div class="category-item">
+        <img class="category-img" src="images/categories/завтраки.png" alt="Завтраки" >
+        <span class="category-title">Завтраки</span>
+    </div>
+</a>                    <a href="category/soup/index.html" class="category-row">
+    <div class="category-item">
+        <img class="category-img" src="images/categories/суп.png" alt="Супы" >
+        <span class="category-title">Супы</span>
+    </div>
+</a>                    <a href="category/pies/index.html" class="category-row">
+    <div class="category-item">
+        <img class="category-img" src="images/categories/пирожки.png" alt="Выпечка" >
+        <span class="category-title">Выпечка</span>
+    </div>
+</a>                    <a href="category/meat/index.html" class="category-row">
+    <div class="category-item">
+        <img class="category-img" src="images/categories/мясо.png" alt="Блюда из мяса" >
+        <span class="category-title">Блюда из мяса</span>
+    </div>
+</a>                    <a href="category/buckwheat/index.html" class="category-row">
+    <div class="category-item">
+        <img class="category-img" src="images/categories/гречка.png" alt="Блюда из гречки" >
+        <span class="category-title">Блюда из гречки</span>
+    </div>
+</a>                    <a href="category/rise/index.html" class="category-row">
+    <div class="category-item">
+        <img class="category-img" src="images/categories/рис.png" alt="Блюда из риса" >
+        <span class="category-title">Блюда из риса</span>
+    </div>
+</a>                    <a href="category/potato/index.html" class="category-row">
+    <div class="category-item">
+        <img class="category-img" src="images/categories/картошка.png" alt="Картошка с мясом" >
+        <span class="category-title">Картошка с мясом</span>
+    </div>
+</a>                    <a href="category/garnish/index.html" class="category-row">
+    <div class="category-item">
+        <img class="category-img" src="images/categories/гарниры.png" alt="Гарниры" >
+        <span class="category-title">Гарниры</span>
+    </div>
+</a>                    <a href="category/cutlets/index.html" class="category-row">
+    <div class="category-item">
+        <img class="category-img" src="images/categories/котлеты.png" alt="Котлеты" >
+        <span class="category-title">Котлеты</span>
+    </div>
+</a>                    <a href="category/aero-grill/index.html" class="category-row">
+    <div class="category-item">
+        <img class="category-img" src="images/categories/аэрогриль.png" alt="В аэрогриле" >
+        <span class="category-title">В аэрогриле</span>
+    </div>
+</a>                    <a href="category/oven/index.html" class="category-row">
+    <div class="category-item">
+        <img class="category-img" src="images/categories/духовка.png" alt="В духовке" >
+        <span class="category-title">В духовке</span>
+    </div>
+</a>                    <a href="category/pizza/index.html" class="category-row">
+    <div class="category-item">
+        <img class="category-img" src="images/categories/пицца.png" alt="Пицца" >
+        <span class="category-title">Пицца</span>
+    </div>
+</a>                    <a href="category/fryer/index.html" class="category-row">
+    <div class="category-item">
+        <img class="category-img" src="images/categories/фритюр.png" alt="Фритюр" >
+        <span class="category-title">Фритюр</span>
+    </div>
+</a>                    <a href="category/desserts/index.html" class="category-row">
+    <div class="category-item">
+        <img class="category-img" src="images/categories/десерты.png" alt="Десерты" >
+        <span class="category-title">Десерты</span>
+    </div>
+</a>                <a href="/receipt/julienne-casserole" class="category-row">
+    <div class="category-item">
+        <img class="category-img" src="images/categories/random.png" alt="Случайный рецепт" >
+        <span class="category-title">Случайный рецепт</span>
+    </div>
+</a>    </div>
+
+    </body>
+</html>
