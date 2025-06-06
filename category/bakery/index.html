@@ -1,0 +1,200 @@
+<h1>Выпечка</h1>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Выпечка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    
+    <meta name="theme-color" content="hsl(25, 89%, 21%)">
+    <link rel="apple-touch-icon" href="../../images/iphone-icon-big.png"/>
+
+    <style>
+        @font-face {
+            font-family: GraublauWeb;
+            src: url(../../fonts/NewLetterGothicC.otf) format("opentype");
+        }
+        @font-face {
+            font-family: GraublauWeb;
+            font-weight: bold;
+            src: url(../../fonts/NewLetterGothicC-Bold.otf) format("opentype");
+        }
+        .title, h1, h2, h3, h4 {
+            color: #4b2200;
+        }
+        body {
+            font-family: 'GraublauWeb', serif;
+            color: #662e06;
+            font-size: 1rem;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(../../images/2.webp);
+            background-size: auto;
+            background-repeat: repeat;
+            filter: opacity(50%);
+            z-index: -1;
+        }
+        body {
+            overflow: auto;
+        }
+        h1 {
+            font-size: 4vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5vh;
+            padding-top: 2vh; !important;
+        }
+    </style>
+
+        <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 16px 32px;
+            box-sizing: border-box;
+            align-items: center;
+            margin: auto;
+        }
+
+        .receipt-link {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .receipt-card {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: #fef2dc;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%; /* растягивать */
+        }
+
+        .receipt-img {
+            width: 100%;
+            aspect-ratio: 4 / 2;
+            object-fit: cover;
+            display: block;
+        }
+
+        .receipt-title {
+            font-size: 3vh;
+            color: #662e06;
+            text-align: center;
+            padding: 25px 0 15px;
+        }
+
+        .receipt-ingredients {
+            padding: 12px 16px;
+            font-size: 2vh;
+            color: #662e06;
+        }
+
+        .receipt-ingredients strong {
+            color: #662e06;
+        }
+    </style>
+</head>
+<body>
+<div class="background"></div>
+    <div class="container">
+            <a class="receipt-link" href="../../receipt/pie-cheeseburger/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/pie-cheeseburger.jpg" alt="Мясной пирог &quot;Чизбургер&quot;">
+                <div class="receipt-title">
+                    <span>Мясной пирог &quot;Чизбургер&quot;</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> вода или молоко, дрожжи, сахар, яйца, растительное масло, мука, фарш, лук, соленые огурцы, сыр, кетчуп, желток, молоко, кунжут, соль
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/chebureks/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/chebureks.jpg" alt="Чебуреки">
+                <div class="receipt-title">
+                    <span>Чебуреки</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> мука, растительное масло, кипяток, водка, фарш, лук, вода, чеснок, соль
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/bun-with-staff/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/bun-with-staff.jpg" alt="Булочки с начинкой">
+                <div class="receipt-title">
+                    <span>Булочки с начинкой</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> булочки для бургеров, плавленный сыр, колбаса, соленые огурцы, кетчуп, томаты черри, сыр
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/kurniki/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/kurniki.jpg" alt="Курники с курицей">
+                <div class="receipt-title">
+                    <span>Курники с курицей</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> кефир, мука, сливочное масло, сода, соль, куриное филе, картошка, лук, вода, яйца
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/ham-cheese-puffs/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/ham-cheese-puffs.jpg" alt="Слойки с ветчиной и сыром">
+                <div class="receipt-title">
+                    <span>Слойки с ветчиной и сыром</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> слоеное тесто (бездрожжевое), ветчина, сыр, яйца, майонез, желток, сливки 20%, кунжут
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/pie-ham-cheese/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/pie-ham-cheese.jpg" alt="Пирог с ветчиной и сыром">
+                <div class="receipt-title">
+                    <span>Пирог с ветчиной и сыром</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> слоеное тесто (бездрожжевое), ветчина, сыр, майонез, кетчуп, желток, кунжут, тыквенные семечки
+                </div>
+            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/pie-with-rice/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/pie-with-rice.jpg" alt="Заливной пирог с рисом, яйцами и зелёным луком">
+                <div class="receipt-title">
+                    <span>Заливной пирог с рисом, яйцами и зелёным луком</span>
+                </div>
+                <div class="receipt-ingredients">
+                    <strong>Состав:</strong> мука, сливочное масло, кефир, яйца, рис, разрыхлитель, соль
+                </div>
+            </div>
+        </a>
+    </div>
+
+    </body>
+</html>
