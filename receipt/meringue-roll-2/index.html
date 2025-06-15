@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Меренговый рулет</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    
+    <meta name="theme-color" content="hsl(25, 89%, 21%)">
+    <link rel="apple-touch-icon" href="../../images/iphone-icon-big.png"/>
+
+    <style>
+        @font-face {
+            font-family: GraublauWeb;
+            src: url(../../fonts/NewLetterGothicC.otf) format("opentype");
+        }
+        @font-face {
+            font-family: GraublauWeb;
+            font-weight: bold;
+            src: url(../../fonts/NewLetterGothicC-Bold.otf) format("opentype");
+        }
+        .title, h1, h2, h3, h4 {
+            color: #4b2200;
+        }
+        body {
+            font-family: 'GraublauWeb', serif;
+            color: #662e06;
+            font-size: 1rem;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(../../images/2.webp);
+            background-size: auto;
+            background-repeat: repeat;
+            filter: opacity(50%);
+            z-index: -1;
+        }
+        body {
+            overflow: auto;
+        }
+        h1 {
+            font-size: 4vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5vh;
+            padding-top: 2vh; !important;
+        }
+    </style>
+
+        <style>
+        .container {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .recipe-image {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 1.5rem;
+        }
+
+        .ingredients {
+            background-color: #fef2e6;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .ingredients h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        .ingredient-item {
+            padding: 0.3rem 0;
+            border-bottom: 1px solid #e3d5c6;
+        }
+
+        .ingredient-item:last-child {
+            border-bottom: none;
+        }
+
+        .video {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 315px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .steps {
+            padding: 1rem;
+            background-color: #fef2e6;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .notes {
+            margin-bottom: 20px;
+        }
+
+        .step {
+            margin-bottom: 2rem;
+        }
+
+        .step img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .step-text {
+            line-height: 1.6;
+        }
+
+        .step-number {
+            color: #4b2200;
+            font-weight: bold;
+        }
+
+        .step-divider {
+            border: none;
+            height: 2px;
+            background: #662e06;
+            opacity: 30%;
+            margin: 2rem 0;
+        }
+        .receipt-container {
+            margin-bottom: 30px;
+        }
+        .receipt-link {
+            text-decoration: none;
+            color: #662e06;
+        }
+    </style>
+</head>
+<body>
+<div class="background"></div>
+        <div class="container">
+        <h1 class="title">Меренговый рулет</h1>
+
+        <img src="../../images/receipts/meringue-roll-2.jpg" alt="Меренговый рулет"
+             class="recipe-image">
+
+                    <div class="ingredients">
+                <h3>Ингредиенты:</h3>
+                                    <div class="ingredient-item">
+                                                    Белок - 170 г. (примерно 5 яиц)
+                                            </div>
+                                    <div class="ingredient-item">
+                                                    Сахар - 220 г.
+                                            </div>
+                                    <div class="ingredient-item">
+                                                    Кукурузный крахмал - 20 г.
+                                            </div>
+                                    <div class="ingredient-item">
+                                                    Лимонный сок - 1 ч.л.
+                                            </div>
+                                    <div class="ingredient-item">
+                                                    Сливки 30% - 170 г.
+                                            </div>
+                                    <div class="ingredient-item">
+                                                    Творожный сыр - 250 г.
+                                            </div>
+                                    <div class="ingredient-item">
+                                                    Сахарная пудра - 40 г.
+                                            </div>
+                            </div>
+        
+        
+                    <h3>Видео рецепт:</h3>
+            <div class="video">
+                <iframe width="720" height="405"
+                        src="https://rutube.ru/play/embed/dbdf3beafce2a48d48975eaeef0f21b1/?p=ymnthSbQoN-CCAoyY6yTDA" frameBorder="0"
+                        allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+                </iframe>
+            </div>
+        
+                    <h3>Пошаговый рецепт:</h3>
+            <div class="steps">
+                <div class="cooking-steps">
+                                            <div class="step">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 1.</span> Сначала взбиваем белки добавляя щепотку соли.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 2.</span> Как только масса побелела, добавляем частями сахар и взбиваем на самой высокой скорости. Масса должна получиться устойчивой.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 3.</span> Далее добавляем лимонный сок и кукурузный крахмал - еще раз перемешиваем.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 4.</span> Выкладываем на противень, равномерно распределяя. Используйте хороший пергамент для выпечки - силиконизированный чтобы ничего не прилипало.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 5.</span> Время приготовления зависит от вашей духовки (около 30 минут) Я выпекала 25 минут при температуре 150. Начинайте выпекать с температуры 140.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 6.</span> Верхний слой должен подсушиться и покрыться корочкой. При нажатии на меренгу сверху она потрескается, но внутри останется мягкой.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 7.</span> После приготовления дайте меренге остыть. Накройте его другим листом бумаги для выпечки и переверните.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 8.</span> Для крема перемешиваем все ингредиенты и взбиваем пока масса не станет однородной и плотной - крем готов.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 9.</span> Крем выкладываем на меренгу, распределяем равномерно. Сверху выкладываем ягоды или фрукты.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 10.</span> Сворачиваем аккуратно помогая бумагой для выпечки. Украшаем остатками крема и убираем холодильник на 2 часа.
+                            </div>
+                        </div>
+                                                            </div>
+            </div>
+                            <h3>Оригинальный рецепт:</h3>
+            <div class="receipt-container">
+                <a class="receipt-link" href="https://www.instagram.com/reel/C86xRHIN-S8/?igsh=MWgyNGRibGwxMTZraw==" target="_blank">https://www.instagram.com/reel/C86xRHIN-S8/?igsh=MWgyNGRibGwxMTZraw==</a>
+            </div>
+            </div>
+
+    </body>
+</html>
