@@ -1,0 +1,178 @@
+<h1>Лимонады</h1>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лимонады</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    
+    <meta name="theme-color" content="hsl(25, 89%, 21%)">
+    <link rel="apple-touch-icon" href="../../images/iphone-icon-big.png"/>
+
+    <style>
+        @font-face {
+            font-family: GraublauWeb;
+            src: url(../../fonts/NewLetterGothicC.otf) format("opentype");
+        }
+        @font-face {
+            font-family: GraublauWeb;
+            font-weight: bold;
+            src: url(../../fonts/NewLetterGothicC-Bold.otf) format("opentype");
+        }
+        .title, h1, h2, h3, h4 {
+            color: #4b2200;
+        }
+        body {
+            font-family: 'GraublauWeb', serif;
+            color: #662e06;
+            font-size: 1rem;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(../../images/2.webp);
+            background-size: auto;
+            background-repeat: repeat;
+            filter: opacity(50%);
+            z-index: -1;
+        }
+        body {
+            overflow: auto;
+        }
+        h1 {
+            font-size: 4vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5vh;
+            padding-top: 2vh; !important;
+        }
+    </style>
+
+        <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 16px 32px;
+            box-sizing: border-box;
+            align-items: center;
+            margin: auto;
+        }
+
+        .receipt-link {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .receipt-card {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: #fef2dc;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%; /* растягивать */
+        }
+
+        .receipt-img {
+            width: 100%;
+            aspect-ratio: 4 / 2;
+            object-fit: cover;
+            display: block;
+        }
+
+        .receipt-title {
+            font-size: 3vh;
+            color: #662e06;
+            text-align: center;
+            padding: 25px 0 15px;
+        }
+
+        .receipt-ingredients {
+            padding: 12px 16px;
+            font-size: 2vh;
+            color: #662e06;
+        }
+
+        .receipt-ingredients strong {
+            color: #662e06;
+        }
+    </style>
+</head>
+<body>
+<div class="background"></div>
+    <div class="container">
+            <a class="receipt-link" href="../../receipt/lemonade-strawberry-lemon-mint/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/lemonade-strawberry-lemon-mint.jpg" alt="Лимонад клубника-лимон-мята">
+                <div class="receipt-title">
+                    <span>Лимонад клубника-лимон-мята</span>
+                </div>
+                                    <div class="receipt-ingredients">
+                        <strong>Состав:</strong> клубника, лимон, свежая мята, лёд, мёд, минеральная вода с газом
+                    </div>
+                            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/lemonade-kiwi-lime/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/lemonade-kiwi-lime.jpg" alt="Лимонад киви-лайм">
+                <div class="receipt-title">
+                    <span>Лимонад киви-лайм</span>
+                </div>
+                                    <div class="receipt-ingredients">
+                        <strong>Состав:</strong> киви, лайм, мёд, лёд, минеральная вода с газом
+                    </div>
+                            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/brazil-lemonade/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/brazil-lemonade.jpg" alt="Бразильский лимонад">
+                <div class="receipt-title">
+                    <span>Бразильский лимонад</span>
+                </div>
+                                    <div class="receipt-ingredients">
+                        <strong>Состав:</strong> лайм, сгущенка, вода, лёд, минеральная вода с газом
+                    </div>
+                            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/fresh-lemonade/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/fresh-lemonade.jpg" alt="Освежающий лимонад">
+                <div class="receipt-title">
+                    <span>Освежающий лимонад</span>
+                </div>
+                                    <div class="receipt-ingredients">
+                        <strong>Состав:</strong> апельсин, лимон, киви, сахар, минеральная вода с газом
+                    </div>
+                            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/peach-lemonade/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/peach-lemonade.jpg" alt="Персиковый лимонад">
+                <div class="receipt-title">
+                    <span>Персиковый лимонад</span>
+                </div>
+                                    <div class="receipt-ingredients">
+                        <strong>Состав:</strong> персики, мёд или сахар, лимон, свежая мята, лёд, минеральная вода с газом
+                    </div>
+                            </div>
+        </a>
+    </div>
+
+    </body>
+</html>

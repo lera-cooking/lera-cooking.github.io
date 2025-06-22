@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Чебуреки</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    
+    <meta name="theme-color" content="hsl(25, 89%, 21%)">
+    <link rel="apple-touch-icon" href="../../images/iphone-icon-big.png"/>
+
+    <style>
+        @font-face {
+            font-family: GraublauWeb;
+            src: url(../../fonts/NewLetterGothicC.otf) format("opentype");
+        }
+        @font-face {
+            font-family: GraublauWeb;
+            font-weight: bold;
+            src: url(../../fonts/NewLetterGothicC-Bold.otf) format("opentype");
+        }
+        .title, h1, h2, h3, h4 {
+            color: #4b2200;
+        }
+        body {
+            font-family: 'GraublauWeb', serif;
+            color: #662e06;
+            font-size: 1rem;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(../../images/2.webp);
+            background-size: auto;
+            background-repeat: repeat;
+            filter: opacity(50%);
+            z-index: -1;
+        }
+        body {
+            overflow: auto;
+        }
+        h1 {
+            font-size: 4vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5vh;
+            padding-top: 2vh; !important;
+        }
+    </style>
+
+        <style>
+        .container {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .recipe-image {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 1.5rem;
+        }
+
+        .ingredients {
+            background-color: #fef2e6;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .ingredients h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        .ingredient-item {
+            padding: 0.3rem 0;
+            border-bottom: 1px solid #e3d5c6;
+        }
+
+        .ingredient-item:last-child {
+            border-bottom: none;
+        }
+
+        .video {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 315px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .steps {
+            padding: 1rem;
+            background-color: #fef2e6;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .notes {
+            margin-bottom: 20px;
+        }
+
+        .step {
+            margin-bottom: 2rem;
+        }
+
+        .step img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .step-text {
+            line-height: 1.6;
+        }
+
+        .step-number {
+            color: #4b2200;
+            font-weight: bold;
+        }
+
+        .step-divider {
+            border: none;
+            height: 2px;
+            background: #662e06;
+            opacity: 30%;
+            margin: 2rem 0;
+        }
+        .receipt-container {
+            margin-bottom: 30px;
+        }
+        .receipt-link {
+            text-decoration: none;
+            color: #662e06;
+        }
+
+        .recipe-content {
+            font-family: 'GraublauWeb', serif;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #4b2200;
+            max-width: 800px;
+        }
+
+        .receipt-content-item {
+            background-color: #fef2e6;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .recipe-content h1,
+        .recipe-content h2,
+        .recipe-content h3,
+        .recipe-content h4 {
+            font-family: 'GraublauWeb', serif;
+            color: #4b2200;
+            margin-top: 0.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .recipe-content h1 {
+            font-size: 2rem;
+            border-bottom: 2px solid #4b2200;
+            padding-bottom: 0.3rem;
+        }
+
+        .recipe-content h2 {
+            font-size: 1.6rem;
+            padding-left: 0.5rem;
+        }
+
+        .recipe-content h3 {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .recipe-content h4 {
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        .recipe-content p {
+            margin-bottom: 1rem;
+        }
+
+        .recipe-content ul {
+            margin-bottom: 1rem;
+        }
+
+        .recipe-content ul {
+            list-style-type: disc;
+        }
+
+        .recipe-content li {
+            margin-bottom: 0.4rem;
+            padding-left: 0.3rem;
+        }
+
+        .recipe-content strong {
+            color: #2e1200;
+            font-weight: bold;
+        }
+
+        .recipe-content em {
+            font-style: italic;
+            color: #5c2c00;
+        }
+
+        .recipe-content blockquote {
+            margin: 1.5rem 0;
+            padding: 0.7rem 1.2rem;
+            background-color: #fdf8f3;
+            border-left: 4px solid #a65b2d;
+            color: #3b1a00;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+<div class="background"></div>
+        <div class="container">
+        <h1 class="title">Чебуреки</h1>
+
+        <img src="../../images/receipts/chebureks-2.jpg" alt="Чебуреки"
+             class="recipe-image">
+
+                    <div class="ingredients">
+                <h3>Ингредиенты:</h3>
+                                    <div class="ingredient-item">
+                                                    Теплая вода - 100 мл.
+                                            </div>
+                                    <div class="ingredient-item">
+                                                    Мука - 500 г.
+                                            </div>
+                                    <div class="ingredient-item">
+                                                    Вода - 250 мл.
+                                            </div>
+                                    <div class="ingredient-item">
+                                                    Растительное масло - 430 мл.
+                                            </div>
+                                    <div class="ingredient-item">
+                                                    Соль
+                                            </div>
+                                    <div class="ingredient-item">
+                                                    Фарш - 380 г.
+                                            </div>
+                            </div>
+        
+        
+                    <h3>Видео рецепт:</h3>
+            <div class="video">
+                <iframe width="720" height="405"
+                        src="https://rutube.ru/play/embed/415bd5a074d43dcf6de5f9c0ccb8e40b/?p=ETRMGCk_cR-TWmD8rKtuAg" frameBorder="0"
+                        allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+                </iframe>
+            </div>
+        
+                    <h3>Пошаговый рецепт:</h3>
+            <div class="steps">
+                <div class="cooking-steps">
+                                            <div class="step">
+                                                            <img src="../../images/steps/chebureks-2/step1.jpg"
+                                     alt="Шаг 1">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 1.</span> Чтобы приготовить хрустящие и сочные крымские чебуреки, подготавливаем нужные ингредиенты.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                            <img src="../../images/steps/chebureks-2/step2.jpg"
+                                     alt="Шаг 2">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 2.</span> Как приготовить крымские чебуреки: В муку вливаем 1 ст. ложку растительного масла.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                            <img src="../../images/steps/chebureks-2/step3.jpg"
+                                     alt="Шаг 3">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 3.</span> В воду добавляем щепотку соли. Вливаем воду с солью в муку и перемешиваем тесто ложкой. Затем вымешиваем руками 7-10 минут. Тесто должно получится крутым, но чуть мягче, чем на пельмени. Оставляем его на 30 минут.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                            <img src="../../images/steps/chebureks-2/step4.jpg"
+                                     alt="Шаг 4">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 4.</span> К фаршу добавляем зелень, кориандр молотый, черный молотый перец, соль и говяжий бульон (или тёплую кипяченую воду). Перемешиваем.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                            <img src="../../images/steps/chebureks-2/step5.jpg"
+                                     alt="Шаг 5">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 5.</span> Спустя 30 минут формируем из теста колбаску и разрезаем на 7 частей. Каждый кусочек вымешиваем в течение 2-х минут и даем отдохнуть еще 15 минут. Не добавляя муки, раскатываем тесто в пласт. Равномерно распределяем фарш на 7 чебуреков, выкладывая начинку только на половину пласта.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                            <img src="../../images/steps/chebureks-2/step6.jpg"
+                                     alt="Шаг 6">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 6.</span> Накрываем начинку второй половиной и закрепляем края вилкой.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                            <img src="../../images/steps/chebureks-2/step7.jpg"
+                                     alt="Шаг 7">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 7.</span> Выкладываем чебуреки на раскаленную сковородку и обжариваем по пару минут с каждой стороны (огонь - чуть выше среднего).
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                            <img src="../../images/steps/chebureks-2/step8.jpg"
+                                     alt="Шаг 8">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 8.</span> Обжарив с двух сторон, перекладываем чебуреки на бумажную салфетку, чтобы удалить остатки жира.
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                            <img src="../../images/steps/chebureks-2/step9.jpg"
+                                     alt="Шаг 9">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 9.</span> Сочные и хрустящие крымские чебуреки готовы. Приятного аппетита!
+                            </div>
+                        </div>
+                                                            </div>
+            </div>
+                                    <h3>Оригинальный рецепт:</h3>
+            <div class="receipt-container">
+                <a class="receipt-link" href="https://www.russianfood.com/recipes/recipe.php?rid=138183" target="_blank">https://www.russianfood.com/recipes/recipe.php?rid=138183</a>
+            </div>
+            </div>
+
+    </body>
+</html>
