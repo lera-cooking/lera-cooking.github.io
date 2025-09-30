@@ -97,7 +97,7 @@
         }
 
         .receipt-title {
-            font-size: 3vh;
+            font-size: 2.2rem;
             color: #662e06;
             text-align: center;
             padding: 25px 0 15px;
@@ -105,13 +105,57 @@
 
         .receipt-ingredients {
             padding: 12px 16px;
-            font-size: 2vh;
+            font-size: 1.5rem;
             color: #662e06;
         }
 
         .receipt-ingredients strong {
             color: #662e06;
         }
+        @media (min-width: 700px) and (max-width: 1200px) {
+            .container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                padding: 0 16px 32px;
+                box-sizing: border-box;
+                margin: auto;
+            }
+
+            .receipt-link {
+                width: 100%;
+            }
+
+            .receipt-card {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between; /* ингредиенты прижмутся вниз */
+                height: 100%;
+                margin-bottom: 0;
+            }
+
+            .receipt-img {
+                width: 100%;
+                aspect-ratio: 4 / 2;
+                object-fit: cover;
+                display: block;
+            }
+
+            .receipt-title {
+                text-align: center;
+                min-height: 60px; /* одинаковая высота заголовка */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .receipt-ingredients {
+                margin-top: auto; /* гарантирует, что блок уйдёт вниз */
+                padding: 12px 16px;
+            }
+        }
+
+
     </style>
 </head>
 <body>
@@ -125,6 +169,17 @@
                 </div>
                                     <div class="receipt-ingredients">
                         <strong>Состав:</strong> персики, мёд или сахар, лимон, свежая мята, лёд, минеральная вода с газом
+                    </div>
+                            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/cocktail-tropicana/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/cocktail-tropicana.jpg" alt="Коктейль &quot;Тропический&quot;">
+                <div class="receipt-title">
+                    <span>Коктейль &quot;Тропический&quot;</span>
+                </div>
+                                    <div class="receipt-ingredients">
+                        <strong>Состав:</strong> молоко, банан, апельсиновый сок, мёд или сахар
                     </div>
                             </div>
         </a>
@@ -191,6 +246,72 @@
                 </div>
                                     <div class="receipt-ingredients">
                         <strong>Состав:</strong> банан, шоколад, пломбир, молоко
+                    </div>
+                            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/cocktail-banana-raspberry/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/cocktail-banana-raspberry.jpg" alt="Молочный малиновый коктейль с бананом">
+                <div class="receipt-title">
+                    <span>Молочный малиновый коктейль с бананом</span>
+                </div>
+                                    <div class="receipt-ingredients">
+                        <strong>Состав:</strong> молоко, банан, малина, мёд
+                    </div>
+                            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/smoothie-banana-cacao/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/smoothie-banana-cacao.jpg" alt="Банановый смузи с молоком и какао">
+                <div class="receipt-title">
+                    <span>Банановый смузи с молоком и какао</span>
+                </div>
+                                    <div class="receipt-ingredients">
+                        <strong>Состав:</strong> молоко, банан, какао
+                    </div>
+                            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/smoothie-banana-apple/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/smoothie-banana-apple.jpg" alt="Смузи из киви и яблока, с молоком">
+                <div class="receipt-title">
+                    <span>Смузи из киви и яблока, с молоком</span>
+                </div>
+                                    <div class="receipt-ingredients">
+                        <strong>Состав:</strong> яблоки, киви, молоко, мёд или сахар
+                    </div>
+                            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/smoothie-apple-banana-kiwi/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/smoothie-apple-banana-kiwi.jpg" alt="Смузи из яблока, банана и киви">
+                <div class="receipt-title">
+                    <span>Смузи из яблока, банана и киви</span>
+                </div>
+                                    <div class="receipt-ingredients">
+                        <strong>Состав:</strong> яблоки, банан, киви, мёд, кефир или молоко
+                    </div>
+                            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/smoothie-banana-blackcurrant/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/smoothie-banana-blackcurrant.jpg" alt="Смузи из чёрной смородины и банана">
+                <div class="receipt-title">
+                    <span>Смузи из чёрной смородины и банана</span>
+                </div>
+                                    <div class="receipt-ingredients">
+                        <strong>Состав:</strong> черная смородина, банан, молоко, кефир, мёд или сахар
+                    </div>
+                            </div>
+        </a>
+            <a class="receipt-link" href="../../receipt/smoothie-breakfast/index.html">
+            <div class="receipt-card">
+                <img class="receipt-img" src="../../images/receipts/smoothie-breakfast.jpg" alt="Смузи &quot;На завтрак&quot;">
+                <div class="receipt-title">
+                    <span>Смузи &quot;На завтрак&quot;</span>
+                </div>
+                                    <div class="receipt-ingredients">
+                        <strong>Состав:</strong> молоко, банан, овсяные хлопья, мёд
                     </div>
                             </div>
         </a>
