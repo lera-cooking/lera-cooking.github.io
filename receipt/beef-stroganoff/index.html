@@ -309,7 +309,34 @@
             }
         }
     </style>
-</head>
+        <style>
+            .note-list {
+                list-style: none;
+                padding-left: 0;
+                margin: 0;
+            }
+
+            .note-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0.5rem;
+                background: #fef2e6;
+                padding: 0.5rem 1rem;
+                border-radius: 10px;
+                box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+                position: relative;
+            }
+
+
+            @media (min-width: 700px) and (max-width: 1200px) {
+                .note-item {
+                    padding: 1rem 1rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        </style>
+    </head>
 <body>
 <div class="background"></div>
         <div class="container">
@@ -345,6 +372,17 @@
                                             </div>
                             </div>
         
+                    <div class="notes">
+                <div>
+    
+    <h3 class="note-header">Заметки:</h3>
+
+    <ul class="note-list">
+                    <li class="note-item">
+                <span>Бефстроганов с грибами: грибы обжарить и добавить их в самом конце</span>
+            </li>
+            </ul>
+</div>            </div>
         
                                 <h3>Видео рецепт:</h3>
             <div class="video">
@@ -354,6 +392,34 @@
                 </iframe>
             </div>
         
+                    <h3>Пошаговый рецепт:</h3>
+            <div class="steps">
+                <div class="cooking-steps">
+                                            <div class="step">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 1.</span> Говядину нарезаем на тонкие стейки, отбиваем с двух сторон под пленкой и затем режем на тонкие полосочки
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 2.</span> Готовим на сильном огне на растительном масле в 2 захода, чтобы мясо быстро обжарилось, а не тушилось в сковороде. Обжариваем недолго: буквально до выпаривания воды и всё
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 3.</span> Выкладываем мясо на тарелку и в той же сковороде, где оно жарилось, готовим до золотого цвета нарезанный лук
+                            </div>
+                        </div>
+                                                    <hr class="step-divider">
+                                                                    <div class="step">
+                                                        <div class="step-text">
+                                <span class="step-number">Шаг 4.</span> Возвращаем мясо в сковороду с луком, солим, перчим, добавляем паприку и муку – перемешиваем. Затем добавляем сметану, томатную пасту и воду. Перемешиваем и томим под закрытой крышкой на медленном огне от 40 до 60 минут до мягкого состояния мяса
+                            </div>
+                        </div>
+                                                            </div>
+            </div>
                                     <h3>Оригинальный рецепт:</h3>
             <div class="receipt-container">
                 <a class="receipt-link" href="https://www.instagram.com/reel/DHGKnUOI0_u/?igsh=Z3lxOXB1djBpaGlu" target="_blank">https://www.instagram.com/reel/DHGKnUOI0_u/?igsh=Z3lxOXB1djBpaGlu</a>
